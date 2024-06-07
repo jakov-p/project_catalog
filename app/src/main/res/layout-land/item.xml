@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_big"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/item_id_text_view"
+                style="@style/Text.Normal"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textSize="14sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="@+id/horiz_item_guideline1"
+                app:layout_constraintHorizontal_bias='0.0'
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/cities" />
+
+            <TextView
+                android:id="@+id/item_text_text_view"
+                style="@style/Text.Normal"
+                android:text=""
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/horiz_item_guideline2"
+                app:layout_constraintStart_toStartOf="@+id/horiz_item_guideline1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/cities" />
+
+            <TextView
+                android:id="@+id/item_confidence_text_view"
+                style="@style/Text.Normal"
+                android:text=""
+                android:textAlignment="viewEnd"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias='1.0'
+                app:layout_constraintStart_toStartOf="@+id/horiz_item_guideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/us_zipcodes" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horiz_item_guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.20" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horiz_item_guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.90" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/item_image_url_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text=""
+            android:textColor="@color/primary"
+            android:textSize="10sp"
+            tools:text="@tools:sample/us_phones" />
+    </LinearLayout>
+</layout>

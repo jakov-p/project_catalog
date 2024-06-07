@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Catalog</string>
+
+    <string name="item_details_fragment_title">Catalog Item Details</string>
+    <string name="list_of_items_fragment_title">All Catalog Items</string>
+
+    <string name="no_results">No Results</string>
+    <string name="retry">Retry</string>
+
+    <string name="refresh_failed">Refresh failed.</string>
+    <string name="check_internet_connection">An error occurred.\nCheck internet connection</string>
+</resources>

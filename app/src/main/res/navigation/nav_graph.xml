@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/list_of_items_fragment_title"
+    app:startDestination="@id/listOfItemsFragment">
+    <fragment
+        android:id="@+id/itemDetailsFragment"
+        android:name="com.marlove.catalog.presentation.details.ItemDetailsFragment"
+        android:label="ItemDetailsFragment" />
+    <fragment
+        android:id="@+id/listOfItemsFragment"
+        android:name="com.marlove.catalog.presentation.list.ItemsListFragment"
+        android:label="ListOfItemsFragment">
+        <action
+            android:id="@+id/action_listOfItemsFragment_to_itemDetailsFragment"
+            app:destination="@id/itemDetailsFragment"
+            app:popUpTo="@id/listOfItemsFragment" />
+    </fragment>
+</navigation>

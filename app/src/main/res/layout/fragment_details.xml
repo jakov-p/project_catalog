@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondary_light"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <include
+                    android:id="@+id/image_include"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal"
+                    layout="@layout/image_and_progress"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/details_id_text_view"
+                    style="@style/Text.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="22sp"
+                    tools:text="@tools:sample/cities" />
+
+                <TextView
+                    android:id="@+id/details_text_text_view"
+                    style="@style/Text.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp"
+                    android:text=""
+                    android:textSize="22sp"
+                    tools:text="@tools:sample/cities" />
+                <TextView
+                    android:id="@+id/details_confidence_text_view"
+                    android:layout_width="match_parent"
+                    style="@style/Text.Normal"
+                    android:text=""
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/details_image_url_text_view"
+                    style="@style/Text.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    tools:text="@tools:sample/cities" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

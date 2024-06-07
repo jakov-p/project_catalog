@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_big"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <TextView
+            android:id="@+id/item_id_text_view"
+            style="@style/Text.Normal"
+            android:text=""
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            tools:text="@tools:sample/cities" />
+
+        <TextView
+            android:id="@+id/item_text_text_view"
+            style="@style/Text.Normal"
+            android:gravity="center"
+            android:text=""
+            android:textSize="14sp"
+            tools:text="@tools:sample/cities" />
+
+            <TextView
+                android:id="@+id/item_confidence_text_view"
+                style="@style/Text.Normal"
+                android:text=""
+                android:textColor="@color/primary_light"
+                android:textSize="14sp"
+                />
+
+        <TextView
+            android:id="@+id/item_image_url_text_view"
+            style="@style/Text.Normal"
+            android:text=""
+            android:textColor="@color/primary_super_dark"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            tools:text="@tools:sample/cities" />
+
+    </LinearLayout>
+</layout>
