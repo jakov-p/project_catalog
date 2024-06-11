@@ -45,7 +45,7 @@ class CatalogRepository @Inject constructor(
 
 
     private suspend fun refreshAll( ) =
-        Refresher(allLocalCatalogItems, remoteCatalog,dispatcher ).refresh()
+        Refresher(allLocalCatalogItems, localCatalog, remoteCatalog,dispatcher ).refresh()
 
 
     override  fun getCatalogItemDetails(id:String): ICatalogItemDetailsProvider =

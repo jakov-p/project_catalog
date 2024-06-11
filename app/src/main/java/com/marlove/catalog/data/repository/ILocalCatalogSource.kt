@@ -46,4 +46,10 @@ interface ILocalCatalogSource {
      * @param imageBytes the raw bytes as downloaded from the site
      */
     fun updateImage(id:String, imageBytes: ByteArray)
+
+
+    /**
+     * Deletes all the catalog items
+     */
+    fun deleteAll()
 }

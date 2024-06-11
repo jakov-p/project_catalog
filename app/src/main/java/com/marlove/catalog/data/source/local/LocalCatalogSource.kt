@@ -38,4 +38,10 @@ class LocalCatalogSource @Inject constructor( appDatabase: AppDatabase)
         }
     }
 
+    override fun deleteAll() {
+        catalogItemDao.deleteAll().
+        also {
+            log.d("Deleted all the dbase's contents ")
+        }
+    }
 }
