@@ -20,8 +20,7 @@ class FieldsHider(val imageAndProgressBinding:ImageAndProgressBinding)
 
             imageView.isVisible = visibilityStatus.isImageShown
             imageProgressbar.isVisible = visibilityStatus.isProgressbarShown
-            imageRetryButton.isVisible = visibilityStatus.isRetryButtonShown
-            imageErrorMessageTextView.isVisible = visibilityStatus.isErrorMessageShown
+            retryAndErrorLayout.isVisible  = visibilityStatus.isRetryAndErrorShown
         }
     }
 
@@ -31,15 +30,14 @@ class FieldsHider(val imageAndProgressBinding:ImageAndProgressBinding)
             is ResultState.Unknown -> VisibilityStatus(isImageShown = true)
             is ResultState.Running -> VisibilityStatus(isProgressbarShown = true)
             is ResultState.Success -> VisibilityStatus(isImageShown = true)
-            is ResultState.Error -> VisibilityStatus(isErrorMessageShown = true,
-                                                      isRetryButtonShown = true)
+            is ResultState.Error -> VisibilityStatus(isRetryAndErrorShown = true)
+
         }
     }
 
     data class VisibilityStatus(
         val isImageShown:Boolean = false,
         val isProgressbarShown:Boolean = false,
-        val isRetryButtonShown:Boolean = false,
-        val isErrorMessageShown:Boolean = false
+        val isRetryAndErrorShown:Boolean = false
     )
 }
